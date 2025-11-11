@@ -1,17 +1,18 @@
 #include <stdio.h>
-void recur(int n)
+void fun(int i, int n)
 {
-    if (n == 0)
+    if (i == n+1)
     {
         return;
     }
-    recur(n-1);
-    printf("%d\n", n);
+
+    printf("%d\n", i);
+    fun(i + 1,n);
 }
 int main()
 {
     int n;
     scanf("%d", &n);
-    recur(n);
+    fun(1, n);
     return 0;
 }

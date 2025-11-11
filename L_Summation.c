@@ -1,30 +1,23 @@
 #include <stdio.h>
-void sum(int a[], int n, int i)
+long long int sum(long long int a[], int n, int i)
 {
     if (i == n)
     {
-        return;
+        return 0;
     }
-
- 
-int suma = 0;
-
-    
-    
-    printf("%d ", a[i]);
-    sum(a, n,  i+1);
-    
+    long long int ans = sum(a, n, i + 1);
+    return ans + a[i];
 }
 int main()
 {
     int n;
     scanf("%d", &n);
-    int a[n];
+    long long int a[n];
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &a[i]);
+        scanf("%lld", &a[i]);
     }
-
-    sum(a, n, 0);
+    long long int ans = sum(a, n, 0);
+    printf("%lld",ans);
     return 0;
 }
