@@ -1,2 +1,1 @@
-
-    {
+("I will buy new shoes\n");
